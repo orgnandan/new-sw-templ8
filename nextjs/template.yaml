@@ -98,7 +98,7 @@ spec:
         sourcePath: ./manifests
         repoVisibility: public
         collaborators:
-          - team: "rhdh-demo-gh/${{ parameters.owner | parseEntityRef | pick('name') }}"
+          - team: "orgnandan/${{ parameters.owner | parseEntityRef | pick('name') }}"
             access: maintain
     
     # This step is optional. If autodiscovery is enabled then it's not strictly necessary.
