@@ -70,7 +70,7 @@ spec:
         repoVisibility: public
         allowedHosts: ['github.com']
         description: ${{ parameters.description }}
-        repoUrl: github.com?owner=rhdh-demo-gh&repo=${{ parameters.name }}
+        repoUrl: github.com?owner=orgnandan&repo=${{ parameters.name }}
         defaultBranch: main
         sourcePath: ./source
         collaborators:
@@ -93,7 +93,7 @@ spec:
       input:
         allowedHosts: ['github.com']
         description: ${{ parameters.description }}
-        repoUrl: github.com?owner=rhdh-demo-gh&repo=${{ parameters.name }}-manifests
+        repoUrl: github.com?owner=orgnandan&repo=${{ parameters.name }}-manifests
         defaultBranch: main
         sourcePath: ./manifests
         repoVisibility: public
