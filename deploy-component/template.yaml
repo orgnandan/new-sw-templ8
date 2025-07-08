@@ -57,7 +57,7 @@ spec:
           spec:
             project: default
             source:
-              repoURL: https://github.com/rhdh-demo-gh/${{ parameters.component | parseEntityRef | pick('name') }}-manifests.git
+              repoURL: https://github.com/orgnandan/${{ parameters.component | parseEntityRef | pick('name') }}-manifests.git
               targetRevision: main
               path: ${{ parameters.environment }}
             destination:
@@ -74,7 +74,7 @@ spec:
       name: Create Pull Request
       action: publish:github:pull-request
       input:
-        repoUrl: github.com?repo=app-of-apps&owner=rhdh-demo-gh
+        repoUrl: github.com?repo=app-of-apps&owner=orgnandan
         title: "🤖 New Application (${{ parameters.environment }}): ${{ parameters.component | parseEntityRef | pick('name') }}"
         description: "User @${{ user.entity.metadata.name }} requests a new ${{ parameters.environment }} deployment for Component **${{ parameters.component | parseEntityRef | pick('name') }}**! 🚀"
         commitMessage: "feat: add application.yaml for ${{ parameters.component | parseEntityRef | pick('name') }}"
